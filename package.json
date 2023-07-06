@@ -1,0 +1,24 @@
+{
+  "name": "sif-testes-e2e-automatizados",
+  "version": "1.0.0",
+  "description": "Projeto de testes automatizados com Cypress para o sistema SIF",
+  "main": "index.js",
+  "scripts": {
+    "npm:update": "npm i",
+    "allure:open": "allure open test-report/allure-report",
+    "allure:env": "cp environment.properties test-report/allure-results/ || true",
+    "allure:generate": "allure generate --clean test-report/allure-results/ -o test-report/allure-report",
+    "allure:clear": "rm -r  test-report/allure-results/  test-report/allure-report || true",
+    "cy:open": "npx cypress open",
+    "cy:tests": "npx cypress run --browser chrome --env allure=true",
+    "cy:run": " npx cypress run --browser chrome --config video=false --env allure=true",
+    "cy.update": "install -D cypress@12.16.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.40.0",
+    "cypress": "^12.16.0"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "name": "Using fixtures to represent data",
+  "login": "hello@cypress.io",
+  "pass": "####"
+}
